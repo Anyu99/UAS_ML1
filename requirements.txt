@@ -4,3 +4,4 @@ scikit-learn
 streamlit==1.15.0
 matplotlib==3.5.2
 seaborn
+openpyxl
