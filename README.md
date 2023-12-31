@@ -40,7 +40,7 @@ Faktor Gaya Hidup: Menganalisis tingkat aktivitas fisik, tingkat stres, dan kate
 Kesehatan Kardiovaskular: Memeriksa tekanan darah dan pengukuran detak jantung.
 Analisis Gangguan Tidur: Mengidentifikasi terjadinya gangguan tidur seperti Insomnia dan Sleep Apnea.<br> 
 
-Dataset: [Sleep Health and Lifestyle Dataset](https://www.kaggle.com/datasets/uom190346a/sleep-health-and-lifestyle-dataset).
+Dataset: [German Credit](https://www.kaggle.com/datasets/uciml/german-credit).
 
 ### Variabel-variabel pada Sleep Health and Lifestyle Dataset adalah sebagai berikut:
 - Person ID: Pengenal untuk setiap individu.
@@ -143,5 +143,5 @@ training_data_accuracy = accuracy_score(X_train_prediction, Y_train)
 setelah dilakukannya proses pembuatan model, akurasi yang didapatkan adalah 85% yang mana menunjukan jika model yang dibuat memiliki nilai error yang cukup minim yaitu 15%
 
 ## Deployment
-UAS_ML1
+https://uasml1-vdmm8bcsenwixnbjddedi9.streamlit.app/
 
