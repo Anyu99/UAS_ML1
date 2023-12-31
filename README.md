@@ -143,4 +143,5 @@ training_data_accuracy = accuracy_score(X_train_prediction, Y_train)
 setelah dilakukannya proses pembuatan model, akurasi yang didapatkan adalah 85% yang mana menunjukan jika model yang dibuat memiliki nilai error yang cukup minim yaitu 15%
 
 ## Deployment
-https://uasml1-vdmm8bcsenwixnbjddedi9.streamlit.app/
+UAS_ML1
+
