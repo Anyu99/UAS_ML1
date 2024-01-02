@@ -82,9 +82,9 @@ Credit amount         0 <br>
 Duration              0 <br>
 Purpose               0 <br>
 dtype: int64 <br>
-Kemudian, saat menggunakan df.isnull().sum() untuk menghitung jumlah nilai null di setiap kolom DataFrame df setelah pengisian, hasilnya menunjukkan tidak ada lagi nilai null dalam setiap kolom
+Setelah dilakukan proses pengecekan nilai yang Null terdapat 183 dataset Null pada atribut Saving accounts dan 394 Checking account, maka dari itu perlu dilakukannya processing terhadap atribut tersebut
 
-### Pastikan pada setiap variabel bernilai nul
+### mengisi nilai Null denggan unknown
 ```
 df= df.fillna('unknown')
 df.isnull().sum()
@@ -102,28 +102,32 @@ Purpose             0 <br>
 dtype: int64 <br>
 Perintah df = df.fillna('unknown') digunakan untuk mengisi nilai null (NaN) di dalam DataFrame df dengan string 'unknown'. Ini berarti setiap nilai null yang ada dalam DataFrame akan diganti dengan string 'unknown'.
 
-cek korelasi antar atribut
-```
-plt.figure(figsize=(10,8))
-sns.heatmap(df.corr(),annot=True)
-```
-![image](https://github.com/Anyu99/kualitas-tidur/assets/136258491/a998f7fb-9f26-4834-8018-7045d78c81b2)
+##Exploratory Data Analysis
+Cek distribusi nilai pada atribut Age:
+![image](https://github.com/Anyu99/UAS_ML1/assets/136258491/e8af89a0-5999-4dff-9ef6-95936041a69a)
 
-Visualisasi jumlah tipe gangguan tidur perkategorinya:
-```
-plt.figure(figsize=(3,3))
-sns.set(font_scale=0.8)
-sns.histplot(data=df, x='Sleep Disorder')
-```
-![image](https://github.com/Anyu99/kualitas-tidur/assets/136258491/62a5d7ac-483c-45c9-8ee4-0acf78057a58)
+pada visualisasi tersebut dapat disimpulkan jika dominan umur pada dataset adalah >30 tahun
 
-Distribusi Kategori BMI:
+distribusi tempat tinggal:
 
-![image](https://github.com/Anyu99/kualitas-tidur/assets/136258491/8605d14a-7afd-442d-b3f8-910f2d3fb4ed)
+![image](https://github.com/Anyu99/UAS_ML1/assets/136258491/cb10aba8-fdd4-40e2-a488-82ee767e4ea8)
 
-Distribusi Pekerjaan:
+didalam dataset tersebut tempat tinggal yang ditempati setiap orangnya dominan milik sendiri lalu sewa dan yang paling sedikit free
 
-![image](https://github.com/Anyu99/kualitas-tidur/assets/136258491/ac10722a-878a-450f-814e-b315cc972980)
+visualisasi jenis kelamin:
+![image](https://github.com/Anyu99/UAS_ML1/assets/136258491/e148e99d-52dc-4fbe-a02d-dd3616f50551)
+
+laki-laki menjadi jenis kelamin terbanyak yang ada di dalam dataset.
+
+jenis barang yang dikreditkan:
+![image](https://github.com/Anyu99/UAS_ML1/assets/136258491/57146114-9a79-4620-b749-09982cbc950e)
+
+kebanyakan orang mengajukan kredit untuk pembelian mobil.
+
+distribusi pekerjaan:
+![image](https://github.com/Anyu99/UAS_ML1/assets/136258491/89a154f5-d61b-41f5-8ad6-8425d83dce51)
+
+berdasarkan visualisasi tersebut, status pekerjaan terbanyak ada pada kategori 2 (skilled) yaitu orang yang sudah memiliki keahlian lalu kategori 1 (unskilled and resident) untuk mereka yang belum memiliki keahlian dan menetap di daerah yang sama dengan wilayah kerja mereka.
 
 1. Data preparatation yang pertama kali dilakukan adalah merubah tipe data object (Gender, Occupation, BMI Category dan Sleep Disorder) menjadi integer menggunakan library yanng disediakan oleh sklearn yaitu LabelEncoder:
 ```bash
