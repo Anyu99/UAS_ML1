@@ -6,40 +6,44 @@
 ## Domain Proyek
 
 Ketika bank menilai risiko kredit, mereka mempertimbangkan sejumlah faktor yang penting. Ini bukan hanya tentang memberikan atau menolak pinjaman. Ini adalah tentang mengelola risiko untuk memastikan keberlanjutan dan stabilitas keuangan bank, serta kepentingan nasabahnya. Penilaian risiko kredit yang baik memainkan peran utama dalam aktivitas perbankan modern, dan itu penting karena:<br> 1. Keberlanjutan Keuangan
-Stabilitas Institusi Keuangan: Mengelola risiko kredit membantu bank mengurangi kemungkinan kegagalan keuangan yang dapat berdampak sistemik.<br>
+- Stabilitas Institusi Keuangan: Mengelola risiko kredit membantu bank mengurangi kemungkinan kegagalan keuangan yang dapat berdampak sistemik.<br>
 2. Perlindungan bagi Nasabah dan Bank
-Pencegahan Kerugian: Mencegah risiko kredit buruk membantu melindungi bank dari kerugian besar yang dapat mempengaruhi nasabah dan stabilitas finansial mereka.
+- Pencegahan Kerugian: Mencegah risiko kredit buruk membantu melindungi bank dari kerugian besar yang dapat mempengaruhi nasabah dan stabilitas finansial mereka.
 Kepercayaan Pelanggan: Memberikan pinjaman hanya kepada mereka yang dapat membayar kembali membantu bank memelihara kepercayaan nasabah.<br>
 3. Pengambilan Keputusan yang Bijak
-Pengambilan Keputusan yang Tepat: Analisis risiko kredit yang cermat membantu bank dalam pengambilan keputusan yang lebih akurat tentang pemberian pinjaman.
+- Pengambilan Keputusan yang Tepat: Analisis risiko kredit yang cermat membantu bank dalam pengambilan keputusan yang lebih akurat tentang pemberian pinjaman.
 Kesinambungan Bisnis: Mencegah pinjaman yang tidak terbayar membantu bank menjaga keberlanjutan bisnisnya.<br>
 4. Regulasi dan Kepatuhan
-Kepatuhan Regulasi: Kewajiban mematuhi peraturan pemerintah dalam memberikan pinjaman dengan memeriksa dan menilai risiko kredit secara hati-hati.<br>
+- Kepatuhan Regulasi: Kewajiban mematuhi peraturan pemerintah dalam memberikan pinjaman dengan memeriksa dan menilai risiko kredit secara hati-hati.<br>
 5. Dampak Ekonomi
-Stabilitas Ekonomi: Melalui manajemen risiko kredit yang efektif, bank membantu mempertahankan stabilitas ekonomi dengan menghindari keruntuhan keuangan besar.<br>
+- Stabilitas Ekonomi: Melalui manajemen risiko kredit yang efektif, bank membantu mempertahankan stabilitas ekonomi dengan menghindari keruntuhan keuangan besar.<br>
 
 ## Business Understanding
 
-Bedasarkan penjelasan sebelumnya penting untuk setiap individunya menjaga pola tidur dan hidup sehat, selain dari pada itu penting juga untuk mengetahui kualitas tidur yang selama ini dilakukan, apakah termasuk kedalam ganggunan tidur atau tidak.
-Maka dari itu perlu dibuatkan sistem yang mudah diakses agar setiap individunya dapat mengetahui kualitas tidurnya, apakah termasuk kedalam ganguan tidur atau tidak.
+Pada kasus analisis risiko kredit dalam konteks perbankan adalah penting untuk memahami tujuan dan latar belakang bisnis di balik analisis ini. Ini melibatkan pemahaman yang komprehensif tentang bagaimana pengelolaan risiko kredit berperan dalam strategi bisnis bank dan dampaknya terhadap keberlanjutan serta kepentingan nasabah dan bank.
 
 Bagian laporan ini mencakup:
 
 ### Problem Statements
 
 Menjelaskan pernyataan masalah latar belakang:
-- Sulitnya untuk masyarakat umum agar mengetahui kualitas tidurnya
-- Untuk mengetahui kualitas tidurnya, diperlukannya konsultasi dengan dokter yang mana biayanya tidaklah murah
-- Tim kesehatan yang harus menganalisis gangguan tidur secara manual
+- Manajemen Risiko yang Efektif: Bagaimana cara bank dapat meningkatkan strategi manajemen risiko kredit guna mengurangi kemungkinan kegagalan keuangan yang dapat berdampak sistemik?
+- Kualitas Portofolio Kredit: Bagaimana cara meningkatkan kualitas portofolio kredit untuk melindungi bank dari kerugian besar dan menjaga stabilitas finansial nasabahnya?
+- Kepuasan Nasabah: Bagaimana cara memberikan layanan pinjaman yang cerdas untuk menjaga kepercayaan nasabah sambil tetap meminimalkan risiko kredit?
 
 ### Goals
 
 Menjelaskan tujuan dari pernyataan masalah:
-- Dapat mempermudah masyarakat umum maupun tim kesehatan dalam melakukan klasifikasi kualitas tidur seseorang
-- Dapat mempermudah masyarakat umum untuk mengetahui kualitas tidurnya tanpa harus mengeluarkan uang yang besar untuk bertemu dokter
+- Mengurangi Risiko Finansial: Tujuan utama adalah mengurangi risiko finansial bank dengan memperbaiki proses penilaian risiko kredit sehingga kegagalan keuangan dapat diminimalkan.
+- Meningkatkan Kualitas Portofolio: Memperbaiki kualitas portofolio kredit dengan memberikan pinjaman hanya kepada mereka yang dapat membayar kembali.
+- Optimalisasi Layanan Nasabah: Menawarkan layanan pinjaman yang lebih baik dan lebih cerdas kepada nasabah untuk memelihara kepercayaan pelanggan.
     ### Solution statements
-    - Pembuatan aplikasi yang dapat mempermudah proses klasifikasi kualitas tidur menjadi solusi untuk saat ini. Dengan adanya sistem yang dapat mempermudah dan dapat diakses oleh setiap orang, maka setiap orang dapat mengetahui kualitas tidurnya dan dapat segera menyadari adanya gangguan tidur atau tidak.
-    - Pembuatan aplikasi ini menggunakan dataset yang diambil dari kaggle dan di deploy menggunakan bantuan streamlit. Model yang dibuat menggunakan metode klasifikasi dengan algoritma logistic regression.
+    #Strategi Pemilihan Peminjam yang Lebih Cermat:
+    - Menyusun strategi yang lebih ketat dalam memilih peminjam dengan menganalisis secara rinci keadaan keuangan, riwayat kredit, dan faktor-faktor lain yang berkontribusi terhadap risiko kredit.
+    - Memanfaatkan teknologi untuk mengintegrasikan data keuangan terkini dari berbagai sumber dan menganalisisnya secara cepat dan efisien.
+    #Penggunaan Tools Analisis dan Prediksi:
+    - Menggunakan alat dan platform analisis data canggih untuk memprediksi potensi risiko kredit dan menyusun strategi pengelolaan risiko yang lebih adaptif dan responsif.
+    - Menerapkan teknologi Big Data untuk mengelola, menyimpan, dan menganalisis volume data yang besar dengan lebih efisien.
       
 ## Data Understanding
 Gambaran Umum Dataset:
