@@ -32,30 +32,20 @@ Menjelaskan tujuan dari pernyataan masalah:
       
 ## Data Understanding
 Gambaran Umum Dataset:
-Dataset asli berisi 1000 entri dengan 20 atribut kategorial/simbolik yang disiapkan oleh Prof. Hofmann. Dalam dataset ini, setiap entri mewakili seseorang yang mengajukan kredit di sebuah bank. Setiap orang diklasifikasikan sebagai risiko kredit baik atau buruk berdasarkan serangkaian atribut. Tautan ke dataset asli dapat ditemukan di bawah in.
+Dataset asli berisi 1000 entri dengan 20 atribut kategorial/simbolik yang disiapkan oleh Prof. Hofmann. Dalam dataset ini, setiap entri mewakili seseorang yang mengajukan kredit di sebuah bank. Setiap orang diklasifikasikan sebagai risiko kredit baik atau buruk berdasarkan serangkaian atribut. Tautan ke dataset asli dapat ditemukan di bawah ini.
 
-Fitur Utama Dataset:
-Metrik Tidur yang komprehensif: Jelajahi durasi, kualitas, dan faktor-faktor yang memengaruhi pola tidur.
-Faktor Gaya Hidup: Menganalisis tingkat aktivitas fisik, tingkat stres, dan kategori BMI.
-Kesehatan Kardiovaskular: Memeriksa tekanan darah dan pengukuran detak jantung.
-Analisis Gangguan Tidur: Mengidentifikasi terjadinya gangguan tidur seperti Insomnia dan Sleep Apnea.<br> 
+Dataset: [German Credit Risk](https://www.kaggle.com/datasets/uciml/german-credit).
 
-Dataset: [German Credit](https://www.kaggle.com/datasets/uciml/german-credit).
-
-### Variabel-variabel pada Sleep Health and Lifestyle Dataset adalah sebagai berikut:
-- Person ID: Pengenal untuk setiap individu.
-- Gender:  Jenis kelamin orang tersebut (Pria/Wanita).
-- Age: The age of the person in years.
-- Occupation: Pekerjaan atau profesi orang tersebut.
-- Sleep Duration (hours): Jumlah jam orang tersebut tidur per hari.
-- Quality of Sleep (scale: 1-10): Penilaian subjektif dari kualitas tidur, mulai dari 1 hingga 10.
-- Physical Activity Level (minutes/day): The number of minutes the person engages in physical activity daily.
-- Stress Level (scale: 1-10): Jumlah menit orang tersebut melakukan aktivitas fisik setiap hari.
-- BMI Category: The BMI category of the person (e.g., Underweight, Normal, Overweight).
-- Blood Pressure (systolic/diastolic): Kategori BMI orang tersebut (misalnya, Berat Badan Kurang, Normal, Berat Badan Berlebih).
-- Heart Rate (bpm): Denyut jantung istirahat seseorang dalam denyut per menit.
-- Daily Steps: Jumlah langkah yang dilakukan seseorang per hari.
-- Sleep Disorder: Ada atau tidaknya gangguan tidur pada orang tersebut (Tidak Ada, Insomnia, Sleep Apnea).
+### Variabel-variabel pada German Credit Risk Dataset adalah sebagai berikut:.
+- Sex (text: male, female):  Jenis kelamin orang tersebut.
+- Age (numeric): Jumlah tahun yang telah dihabiskan sejak kelahiran seseorang.
+- Job (numeric: 0 - unskilled and non-resident, 1 - unskilled and resident, 2 - skilled, 3 - highly skilled): Tingkat keahlian atau jenis peketrjaan yang dimiliki oleh individu.
+- Housing (text: own, rent, or free): Menggambarkan status tempat tinggal.
+- Saving accounts (text - little, moderate, quite rich, rich): Tingkat atau jumlah tabungan yang dimiliki oleh individu.
+- Checking account (numeric, in DM - Deutsch Mark): Menggambarkan status atau jumlah uang yang tersedia dalam rekening checking individu.
+- Credit amount (numeric, in DM): Besarnya kredit yang diajukan atau diberikan kepada individu.
+- Duration (numeric, in month): Menunjukkan periode waktu dalam bulan yang diambil untuk melunasi kredit atau jangka waktu pinjaman.
+- Purpose (text: car, furniture/equipment, radio/TV, domestic appliances, repairs, education, business, vacation/others): Mencakup kategori-kategori seperti pembelian mobil, perabot, peralatan rumah tangga, perbaikan, pendidikan, bisnis, liburan, dan tujuan lainnya yang mungkin menjadi alasan seseorang meminjam uang.
 
 **Detail tentang Kolom Gangguan Tidur:**
 - Normal : Individu tidak menunjukkan gangguan tidur tertentu.
