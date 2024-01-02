@@ -71,35 +71,35 @@ Cek dulu nilai yang kosong dalam dataset:
 ```
 df.isnull().sum()
 ```
-Unnamed: 0            0
-Age                   0
-Sex                   0
-Job                   0
-Housing               0
-Saving accounts     183
-Checking account    394
-Credit amount         0
-Duration              0
-Purpose               0
-dtype: int64
+Unnamed: 0            0 <br>
+Age                   0 <br>
+Sex                   0 <br>
+Job                   0 <br>
+Housing               0 <br>
+Saving accounts     183 <br>
+Checking account    394 <br>
+Credit amount         0 <br>
+Duration              0 <br>
+Purpose               0 <br>
+dtype: int64 <br>
 Kemudian, saat menggunakan df.isnull().sum() untuk menghitung jumlah nilai null di setiap kolom DataFrame df setelah pengisian, hasilnya menunjukkan tidak ada lagi nilai null dalam setiap kolom
 
-# Pastikan pada setiap variabel bernilai nul
+### Pastikan pada setiap variabel bernilai nul
 ```
 df= df.fillna('unknown')
 df.isnull().sum()
 ```
-Unnamed: 0          0
-Age                 0
-Sex                 0
-Job                 0
-Housing             0
-Saving accounts     0
-Checking account    0
-Credit amount       0
-Duration            0
-Purpose             0
-dtype: int64
+Unnamed: 0          0 <br>
+Age                 0 <br>
+Sex                 0 <br>
+Job                 0 <br>
+Housing             0 <br>
+Saving accounts     0 <br>
+Checking account    0 <br>
+Credit amount       0 <br>
+Duration            0 <br>
+Purpose             0 <br>
+dtype: int64 <br>
 Perintah df = df.fillna('unknown') digunakan untuk mengisi nilai null (NaN) di dalam DataFrame df dengan string 'unknown'. Ini berarti setiap nilai null yang ada dalam DataFrame akan diganti dengan string 'unknown'.
 
 cek korelasi antar atribut
