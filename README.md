@@ -38,10 +38,10 @@ Menjelaskan tujuan dari pernyataan masalah:
 - Meningkatkan Kualitas Portofolio: Memperbaiki kualitas portofolio kredit dengan memberikan pinjaman hanya kepada mereka yang dapat membayar kembali.
 - Optimalisasi Layanan Nasabah: Menawarkan layanan pinjaman yang lebih baik dan lebih cerdas kepada nasabah untuk memelihara kepercayaan pelanggan.
     ### Solution statements
-    #Strategi Pemilihan Peminjam yang Lebih Cermat:
+    ## 1.Strategi Pemilihan Peminjam yang Lebih Cermat:
     - Menyusun strategi yang lebih ketat dalam memilih peminjam dengan menganalisis secara rinci keadaan keuangan, riwayat kredit, dan faktor-faktor lain yang berkontribusi terhadap risiko kredit.
-    - Memanfaatkan teknologi untuk mengintegrasikan data keuangan terkini dari berbagai sumber dan menganalisisnya secara cepat dan efisien.
-    #Penggunaan Tools Analisis dan Prediksi:
+    - Memanfaatkan teknologi untuk mengintegrasikan data keuangan terkini dari berbagai sumber dan menganalisisnya secara cepat dan efisien.<br>
+    ## 2.Penggunaan Tools Analisis dan Prediksi:
     - Menggunakan alat dan platform analisis data canggih untuk memprediksi potensi risiko kredit dan menyusun strategi pengelolaan risiko yang lebih adaptif dan responsif.
     - Menerapkan teknologi Big Data untuk mengelola, menyimpan, dan menganalisis volume data yang besar dengan lebih efisien.
       
