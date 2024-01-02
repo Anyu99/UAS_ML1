@@ -41,10 +41,9 @@ Menjelaskan tujuan dari pernyataan masalah:
     ## 1.Strategi Pemilihan Peminjam yang Lebih Cermat:
     - Menyusun strategi yang lebih ketat dalam memilih peminjam dengan menganalisis secara rinci keadaan keuangan, riwayat kredit, dan faktor-faktor lain yang berkontribusi terhadap risiko kredit.
     - Memanfaatkan teknologi untuk mengintegrasikan data keuangan terkini dari berbagai sumber dan menganalisisnya secara cepat dan efisien.<br>
-    ## 2.Penggunaan Tools Analisis dan Prediksi:
-    - Menggunakan alat dan platform analisis data canggih untuk memprediksi potensi risiko kredit dan menyusun strategi pengelolaan risiko yang lebih adaptif dan responsif.
-    - Menerapkan teknologi Big Data untuk mengelola, menyimpan, dan menganalisis volume data yang besar dengan lebih efisien.
-      
+    ## 2.Penggunaan Tools Analisis dan Clustering:
+    - Menggunakan alat dan platform analisis data canggih untuk mengelompokkan pelanggan ke dalam segmen-segmen berdasarkan perilaku kredit, memungkinkan identifikasi pola-pola risiko yang berbeda di antara kelompok-kelompok ini.
+          
 ## Data Understanding
 Gambaran Umum Dataset:
 Dataset asli berisi 1000 entri dengan 20 atribut kategorial/simbolik yang disiapkan oleh Prof. Hofmann. Dalam dataset ini, setiap entri mewakili seseorang yang mengajukan kredit di sebuah bank. Setiap orang diklasifikasikan sebagai risiko kredit baik atau buruk berdasarkan serangkaian atribut. Tautan ke dataset asli dapat ditemukan di bawah ini.
@@ -61,11 +60,6 @@ Dataset: [German Credit Risk](https://www.kaggle.com/datasets/uciml/german-credi
 - Credit amount (numeric, in DM): Besarnya kredit yang diajukan atau diberikan kepada individu.
 - Duration (numeric, in month): Menunjukkan periode waktu dalam bulan yang diambil untuk melunasi kredit atau jangka waktu pinjaman.
 - Purpose (text: car, furniture/equipment, radio/TV, domestic appliances, repairs, education, business, vacation/others): Mencakup kategori-kategori seperti pembelian mobil, perabot, peralatan rumah tangga, perbaikan, pendidikan, bisnis, liburan, dan tujuan lainnya yang mungkin menjadi alasan seseorang meminjam uang.
-
-**Detail tentang Kolom Gangguan Tidur:**
-- Normal : Individu tidak menunjukkan gangguan tidur tertentu.
-- Insomnia : Individu mengalami kesulitan untuk tidur atau tetap tertidur, yang menyebabkan tidur yang tidak memadai atau berkualitas buruk.
-- Sleep Apnea :  Individu mengalami henti napas saat tidur, yang mengakibatkan gangguan pola tidur dan potensi risiko kesehatan.
 
 ## Data Preparation
 Cek dulu nilai yang kosong dalam dataset:
