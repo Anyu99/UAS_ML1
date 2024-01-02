@@ -103,7 +103,9 @@ dtype: int64 <br>
 Perintah df = df.fillna('unknown') digunakan untuk mengisi nilai null (NaN) di dalam DataFrame df dengan string 'unknown'. Ini berarti setiap nilai null yang ada dalam DataFrame akan diganti dengan string 'unknown'.
 
 ##Exploratory Data Analysis
+
 Cek distribusi nilai pada atribut Age:
+
 ![image](https://github.com/Anyu99/UAS_ML1/assets/136258491/e8af89a0-5999-4dff-9ef6-95936041a69a)
 
 pada visualisasi tersebut dapat disimpulkan jika dominan umur pada dataset adalah >30 tahun
@@ -115,16 +117,19 @@ distribusi tempat tinggal:
 didalam dataset tersebut tempat tinggal yang ditempati setiap orangnya dominan milik sendiri lalu sewa dan yang paling sedikit free
 
 visualisasi jenis kelamin:
+
 ![image](https://github.com/Anyu99/UAS_ML1/assets/136258491/e148e99d-52dc-4fbe-a02d-dd3616f50551)
 
 laki-laki menjadi jenis kelamin terbanyak yang ada di dalam dataset.
 
 jenis barang yang dikreditkan:
+
 ![image](https://github.com/Anyu99/UAS_ML1/assets/136258491/57146114-9a79-4620-b749-09982cbc950e)
 
 kebanyakan orang mengajukan kredit untuk pembelian mobil.
 
 distribusi pekerjaan:
+
 ![image](https://github.com/Anyu99/UAS_ML1/assets/136258491/89a154f5-d61b-41f5-8ad6-8425d83dce51)
 
 berdasarkan visualisasi tersebut, status pekerjaan terbanyak ada pada kategori 2 (skilled) yaitu orang yang sudah memiliki keahlian lalu kategori 1 (unskilled and resident) untuk mereka yang belum memiliki keahlian dan menetap di daerah yang sama dengan wilayah kerja mereka.
