@@ -213,3 +213,31 @@ berdasarkan hasil tersebut dapat dilihat pembagian dataset menjadi 3 kelompok be
 ## Deployment
 [Aplikasi Pembagian Cluster German Credit Risk](https://uasml1-vdmm8bcsenwixnbjddedi9.streamlit.app/)
 
+1. Sidebar:
+
+![image](https://github.com/Anyu99/UAS_ML1/assets/136258491/93269eb2-de9f-4367-9a2f-688e1290c62e)
+
+didalam sidebar, terdapat slider yang berfungsi untuk memilih berapa cluster dataset akan dibagi.
+
+2. Main Page:
+
+![image](https://github.com/Anyu99/UAS_ML1/assets/136258491/2aa9fe02-4f48-420b-a5cd-fb41f886989e)
+
+pada bagian main page terdapat isi dataset dan juga button fungsi dimana dapat menampilkan visualisasi hasil cluster yang telah diproses oleh sistem
+
+3. Pemilihan tampilan visualisasi hasil cluster:
+
+![image](https://github.com/Anyu99/UAS_ML1/assets/136258491/e351ff62-6942-4e0b-b534-4a9d39855689)
+
+dari 3 pilihan visualisasi tersebut bisa dipilih data apa yang ingin di tampilkan lalu klik button "Proses Klasterisasi Tampilan Plot"
+
+4. contoh hasil visualisasi:
+
+![image](https://github.com/Anyu99/UAS_ML1/assets/136258491/bcc20738-ee2b-416c-a182-4c3ff5d0c207)
+
+![image](https://github.com/Anyu99/UAS_ML1/assets/136258491/2df1ba52-97d5-42a5-b57e-a15676251197)
+
+![image](https://github.com/Anyu99/UAS_ML1/assets/136258491/2b1a6f1f-7bd7-44d7-b573-6862f66c84d0)
+
+
+
