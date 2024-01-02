@@ -50,7 +50,7 @@ Dataset asli berisi 1000 entri dengan 20 atribut kategorial/simbolik yang disiap
 
 Dataset: [German Credit Risk](https://www.kaggle.com/datasets/uciml/german-credit).
 
-### Variabel-variabel pada German Credit Risk Dataset adalah sebagai berikut:.
+### Variabel-variabel pada German Credit Risk Dataset adalah sebagai berikut:
 - Sex (text: male, female):  Jenis kelamin orang tersebut.
 - Age (numeric): Jumlah tahun yang telah dihabiskan sejak kelahiran seseorang.
 - Job (numeric: 0 - unskilled and non-resident, 1 - unskilled and resident, 2 - skilled, 3 - highly skilled): Tingkat keahlian atau jenis peketrjaan yang dimiliki oleh individu.
@@ -60,6 +60,11 @@ Dataset: [German Credit Risk](https://www.kaggle.com/datasets/uciml/german-credi
 - Credit amount (numeric, in DM): Besarnya kredit yang diajukan atau diberikan kepada individu.
 - Duration (numeric, in month): Menunjukkan periode waktu dalam bulan yang diambil untuk melunasi kredit atau jangka waktu pinjaman.
 - Purpose (text: car, furniture/equipment, radio/TV, domestic appliances, repairs, education, business, vacation/others): Mencakup kategori-kategori seperti pembelian mobil, perabot, peralatan rumah tangga, perbaikan, pendidikan, bisnis, liburan, dan tujuan lainnya yang mungkin menjadi alasan seseorang meminjam uang.
+
+### Variabel-variabel yang saya gunakan untuk membuat Tools Analisis dan Clustering sebagi berikut:
+- Age (numeric): Jumlah tahun yang telah dihabiskan sejak kelahiran seseorang.
+- Duration (numeric, in month): Menunjukkan periode waktu dalam bulan yang diambil untuk melunasi kredit atau jangka waktu pinjaman.
+- Credit amount (numeric, in DM): Besarnya kredit yang diajukan atau diberikan kepada individu.
 
 ## Data Preparation
 Cek dulu nilai yang kosong dalam dataset:
