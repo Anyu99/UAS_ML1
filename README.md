@@ -169,11 +169,35 @@ Metrik evaluasi yang digunakan adalan akurasi dikarenakan Metrik evaluasi akuras
 $$\text{Akurasi} = \frac{\text{Total Prediksi}}{\text{Jumlah Prediksi Benar}}$$
 
 ```bash
-from sklearn.metrics import accuracy_score
-X_train_prediction = model.predict(X_train)
-training_data_accuracy = accuracy_score(X_train_prediction, Y_train)
+# Membuat figure dengan ukuran tertentu
+fig = plt.figure(figsize=(10, 8))
+
+# Membuat subplot 3D
+ax = fig.add_subplot(111, projection='3d')
+
+# Melakukan scatter plot dengan data yang dimiliki
+scatter = ax.scatter(xs=df_clustered['Age'], ys=df_clustered['Credit amount'], zs=df_clustered['Duration'], c=df_clustered['Labels'], cmap='viridis')
+
+# Menambahkan label pada sumbu x, y, dan z
+ax.set_xlabel('Umur Nasabah', fontsize=12)
+ax.set_ylabel('Total Penggunaan Credit', fontsize=12)
+ax.set_zlabel('Durasi', fontsize=12)
+
+# Menambahkan judul pada plot
+plt.title('Hasil Clustering', fontsize=14)
+
+# Menyesuaikan ukuran teks untuk tick labels
+ax.tick_params(axis='both', which='major', labelsize=10)
+
+# Menampilkan colorbar
+plt.colorbar(scatter, ax=ax, label='Labels')
+
+# Menampilkan plot
+plt.show()
 ```
-setelah dilakukannya proses pembuatan model, akurasi yang didapatkan adalah 85% yang mana menunjukan jika model yang dibuat memiliki nilai error yang cukup minim yaitu 15%
+![image](https://github.com/Anyu99/UAS_ML1/assets/136258491/f27e303a-f240-4147-8efe-8f512b192e97)
+
+
 
 ## Deployment
 https://uasml1-vdmm8bcsenwixnbjddedi9.streamlit.app/
