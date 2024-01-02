@@ -51,7 +51,7 @@ Dataset asli berisi 1000 entri dengan 20 atribut kategorial/simbolik yang disiap
 Dataset: [German Credit Risk](https://www.kaggle.com/datasets/uciml/german-credit).
 
 ## Content
-Beberapa kolom diabaika, karena menurut saya, entah itu tidak penting atau deskripsi mereka ambigu. Atribut-atribut yang dipilih adalah"
+Beberapa kolom diabaikan, karena menurut saya, entah itu tidak penting atau deskripsi mereka ambigu. Atribut-atribut yang dipilih adalah"
 
 ### Variabel-variabel pada German Credit Risk Dataset adalah sebagai berikut:
 - Sex (text: male, female):  Jenis kelamin orang tersebut.
