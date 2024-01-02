@@ -32,7 +32,7 @@ Menjelaskan tujuan dari pernyataan masalah:
       
 ## Data Understanding
 Gambaran Umum Dataset:
-Dataset Kesehatan dan Gaya Hidup Tidur terdiri dari 400 baris dan 13 kolom, yang mencakup berbagai variabel yang berkaitan dengan tidur dan kebiasaan sehari-hari. Dataset ini mencakup rincian seperti jenis kelamin, usia, pekerjaan, durasi tidur, kualitas tidur, tingkat aktivitas fisik, tingkat stres, kategori BMI, tekanan darah, detak jantung, langkah harian, dan ada tidaknya gangguan tidur.
+Dataset asli berisi 1000 entri dengan 20 atribut kategorial/simbolik yang disiapkan oleh Prof. Hofmann. Dalam dataset ini, setiap entri mewakili seseorang yang mengajukan kredit di sebuah bank. Setiap orang diklasifikasikan sebagai risiko kredit baik atau buruk berdasarkan serangkaian atribut. Tautan ke dataset asli dapat ditemukan di bawah in.
 
 Fitur Utama Dataset:
 Metrik Tidur yang komprehensif: Jelajahi durasi, kualitas, dan faktor-faktor yang memengaruhi pola tidur.
