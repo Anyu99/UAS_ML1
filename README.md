@@ -71,7 +71,36 @@ Cek dulu nilai yang kosong dalam dataset:
 ```
 df.isnull().sum()
 ```
-Dikarenakan tidak ada dataset yang kosong kita lanjut
+Unnamed: 0            0
+Age                   0
+Sex                   0
+Job                   0
+Housing               0
+Saving accounts     183
+Checking account    394
+Credit amount         0
+Duration              0
+Purpose               0
+dtype: int64
+Kemudian, saat menggunakan df.isnull().sum() untuk menghitung jumlah nilai null di setiap kolom DataFrame df setelah pengisian, hasilnya menunjukkan tidak ada lagi nilai null dalam setiap kolom
+
+# Pastikan pada setiap variabel bernilai nul
+```
+df= df.fillna('unknown')
+df.isnull().sum()
+```
+Unnamed: 0          0
+Age                 0
+Sex                 0
+Job                 0
+Housing             0
+Saving accounts     0
+Checking account    0
+Credit amount       0
+Duration            0
+Purpose             0
+dtype: int64
+Perintah df = df.fillna('unknown') digunakan untuk mengisi nilai null (NaN) di dalam DataFrame df dengan string 'unknown'. Ini berarti setiap nilai null yang ada dalam DataFrame akan diganti dengan string 'unknown'.
 
 cek korelasi antar atribut
 ```
