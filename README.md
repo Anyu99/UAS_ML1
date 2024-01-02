@@ -84,24 +84,6 @@ Purpose               0 <br>
 dtype: int64 <br>
 Setelah dilakukan proses pengecekan nilai yang Null terdapat 183 dataset Null pada atribut Saving accounts dan 394 Checking account, maka dari itu perlu dilakukannya processing terhadap atribut tersebut
 
-### mengisi nilai Null denggan unknown
-```
-df= df.fillna('unknown')
-df.isnull().sum()
-```
-Unnamed: 0          0 <br>
-Age                 0 <br>
-Sex                 0 <br>
-Job                 0 <br>
-Housing             0 <br>
-Saving accounts     0 <br>
-Checking account    0 <br>
-Credit amount       0 <br>
-Duration            0 <br>
-Purpose             0 <br>
-dtype: int64 <br>
-Perintah df = df.fillna('unknown') digunakan untuk mengisi nilai null (NaN) di dalam DataFrame df dengan string 'unknown'. Ini berarti setiap nilai null yang ada dalam DataFrame akan diganti dengan string 'unknown'.
-
 ##Exploratory Data Analysis
 
 Cek distribusi nilai pada atribut Age:
@@ -134,80 +116,100 @@ distribusi pekerjaan:
 
 berdasarkan visualisasi tersebut, status pekerjaan terbanyak ada pada kategori 2 (skilled) yaitu orang yang sudah memiliki keahlian lalu kategori 1 (unskilled and resident) untuk mereka yang belum memiliki keahlian dan menetap di daerah yang sama dengan wilayah kerja mereka.
 
-1. Data preparatation yang pertama kali dilakukan adalah merubah tipe data object (Gender, Occupation, BMI Category dan Sleep Disorder) menjadi integer menggunakan library yanng disediakan oleh sklearn yaitu LabelEncoder:
-```bash
-from sklearn.preprocessing import LabelEncoder
-label_encoder = LabelEncoder()
+1. Data preparatation yang pertama kali dilakukan adalah pengisian nilai Null dengan unknown
+```
+df= df.fillna('unknown')
+df.isnull().sum()
+```
+Unnamed: 0          0 <br>
+Age                 0 <br>
+Sex                 0 <br>
+Job                 0 <br>
+Housing             0 <br>
+Saving accounts     0 <br>
+Checking account    0 <br>
+Credit amount       0 <br>
+Duration            0 <br>
+Purpose             0 <br>
+dtype: int64 <br>
+Perintah df = df.fillna('unknown') digunakan untuk mengisi nilai null (NaN) di dalam DataFrame df dengan string 'unknown'. Ini berarti setiap nilai null yang ada dalam DataFrame akan diganti dengan string 'unknown'.
 
-df['gender'] = label_encoder.fit_transform(df['Gender'])
-df['Occ'] = label_encoder.fit_transform(df['Occupation'])
-df['BMI'] = label_encoder.fit_transform(df['BMI Category'])
-df['Sleep'] = label_encoder.fit_transform(df['Sleep Disorder'])
-df.head()
+2. setelah itu penghapusan kolom yang tidak dipakai dan penentuan fitur kategorinya:
+
 ```
-2. Setelah itu, dikarenakan kolom Person ID tidak akan dipakai maka kolom tersebut perlu dihapus:
-```bash
-df = df.drop('Person ID', axis=1)
+df.drop('Unnamed: 0', axis=1, inplace=True)
+categorical_features = ['Sex', 'Job', 'Housing', 'Saving accounts', 'Checking account', 'Purpose',]
 ```
-3. Dikarenakan pada kolom Blood Pressure terdapat string berupa **/**, maka kolom tersebut perlu dipecah menjadi 2 yaitu BPU (Tekanan Darah Sistolik) dan BPD (Tekanan Darah Diastolik) menggunakan cara:
-```bash
-df[['BPU', 'BPD']] = df['Blood Pressure'].str.split('/', expand=True)
+
+3. selanjutnya adalah pemilihan atribut yang akan digunakan dalam proses modeling:
+
+```
+num_df = df[['Age', 'Duration', 'Credit amount']]
+num_df.head()
+```
+
+pada kasus ini, atribut yang digunakan hanyalah umur, durasi kredit dan jumlah kredit yang di ajukan.
+
+4. setelah pemilihan atribut maka selanjutnya adalah proses scaling data agar range nilai datasetnya tidak terlalu jauh menggunakan library StandarScaler:
+
+```
+from sklearn.preprocessing import StandardScaler
+
+scaler = StandardScaler()
+num_df_scaled = scaler.fit_transform(num_df)
 ```
 
 ## Modeling
-Model yang dibuat menggunakan metode klasifikasi dengan algoritma Logistic Regression:
-1. Menetapkan variabel independen (X) dan target variabel dependen (Y):
-```bash
-X = df[['Age', 'Sleep Duration', 'Quality of Sleep', 'Physical Activity Level',
-        'Stress Level', 'Heart Rate', 'Daily Steps', 'Occ', 'BMI', 'gender', 'BPU', 'BPD']]
-Y = df['Sleep']
+Model yang dibuat menggunakan metode clustering dengan algoritma K-Means:
+1. Tahap pertama pada modeling adalah pendeklarasian model lalu model fitting menggunakan dataset yang sudah di scaling:
 ```
-2. Membagi data ke dalam data training dan testing dengan proporsi 60% data digunakan untuk training, 40% untuk testing:
-```bash
-X_train, X_test, Y_train, Y_test = train_test_split(X,Y, test_size=0.4, stratify=Y, random_state=2)
+inertia = []
+num_clusters = list(range(1,10))
+
+for k in num_clusters:
+    #membuat model dengan range k
+    kmeans = KMeans(n_clusters = k, n_init=10)
+    #fit model
+    kmeans.fit(num_df_scaled)
+    #tambahkan SSE dalam klaster k ke dalam daftar
+    inertia.append(kmeans.inertia_)
 ```
-3. Penggunakan algoritma:
-```bash
-from sklearn.linear_model import LogisticRegression
-model = LogisticRegression()
-model.fit(X_train, Y_train)
+2.  selanjutnya mencari nilai K untuk pembagian cluster menggunakan elbow:
 ```
+# mencari elbow spot
+cost_kneed = KneeLocator(x = num_clusters , y = inertia , S = 1.0 , curve = 'convex' , direction = 'decreasing' , online = True)
+K_cost_c3 = cost_kneed.elbow
+print('Elbow at k = {} clusters'.format(K_cost_c3))
+
+#Plot grafik
+plt.plot(num_clusters , inertia , 'o-')
+plt.xlabel('Number of Clusters')
+plt.ylabel('SSE')
+#plot garis vertikal di elbow spot
+plt.axvline(x=K_cost_c3, color='black', label='axvline-fullheight', ls='--', linewidth=3)
+```
+![image](https://github.com/Anyu99/UAS_ML1/assets/136258491/ec54ef61-60ec-42f4-9f0b-3a0dfd2a73a3)
+
+berdasarkan hasil pengecekan tersebut dapat dilihat jika cluster terbaik ada pada 3 cluster.
+
 ## Evaluation
-Metrik evaluasi yang digunakan adalan akurasi dikarenakan Metrik evaluasi akurasi digunakan untuk mengukur sejauh mana model klasifikasi berhasil dalam memprediksi kelas-kelas dengan benar. Akurasi mengukur jumlah prediksi yang benar (positif dan negatif) dibagi oleh total jumlah prediksi. Metrik ini memberikan gambaran umum tentang seberapa baik model dapat mengklasifikasikan data dengan benar. Dalam rumus matematika, akurasi dihitung sebagai:
+Evaluasi yang dilakukan dalam proses clustering adalah penggunaan elbow yang mana sudah dilakukan pada proses modeling, cluster optimal yang didapatkan ada pada 3 cluster.
 
-$$\text{Akurasi} = \frac{\text{Total Prediksi}}{\text{Jumlah Prediksi Benar}}$$
-
-```bash
-# Membuat figure dengan ukuran tertentu
-fig = plt.figure(figsize=(10, 8))
-
-# Membuat subplot 3D
-ax = fig.add_subplot(111, projection='3d')
-
-# Melakukan scatter plot dengan data yang dimiliki
-scatter = ax.scatter(xs=df_clustered['Age'], ys=df_clustered['Credit amount'], zs=df_clustered['Duration'], c=df_clustered['Labels'], cmap='viridis')
-
-# Menambahkan label pada sumbu x, y, dan z
-ax.set_xlabel('Umur Nasabah', fontsize=12)
-ax.set_ylabel('Total Penggunaan Credit', fontsize=12)
-ax.set_zlabel('Durasi', fontsize=12)
-
-# Menambahkan judul pada plot
-plt.title('Hasil Clustering', fontsize=14)
-
-# Menyesuaikan ukuran teks untuk tick labels
-ax.tick_params(axis='both', which='major', labelsize=10)
-
-# Menampilkan colorbar
-plt.colorbar(scatter, ax=ax, label='Labels')
-
-# Menampilkan plot
-plt.show()
+selanjutnya adalah melakukan labeling pada setiap dataset berdasarkan hasil clusternya:
 ```
-![image](https://github.com/Anyu99/UAS_ML1/assets/136258491/f27e303a-f240-4147-8efe-8f512b192e97)
+df_clustered = df[['Age', 'Duration', 'Credit amount']]
+df_clustered['Labels'] = clusters
+```
+adapun 5 baris pertama setelah dilakukan proses labeling seperti dbawah ini:
 
+![image](https://github.com/Anyu99/UAS_ML1/assets/136258491/25db7791-63fa-4bda-a157-fbaa487c86cf)
 
+lalu dibuat visualisasi pembagian clusternya sesuai dengan cluster yang dibagi yaitu menjadi 3 cluster atau 3 kelompok:
+
+![image](https://github.com/Anyu99/UAS_ML1/assets/136258491/47cb642b-8c8d-4fad-ba2e-5581661ceead)
+
+berdasarkan hasil tersebut dapat dilihat pembagian dataset menjadi 3 kelompok berdasarkan kemiripan dari setiap datanya. terdapat 3 kelompok yang dapat dibedakan berdasarkan warna yang ditampilkan yaitu kuning, hijau dan ungu.
 
 ## Deployment
-https://uasml1-vdmm8bcsenwixnbjddedi9.streamlit.app/
+[Aplikasi Pembagian Cluster German Credit Risk](https://uasml1-vdmm8bcsenwixnbjddedi9.streamlit.app/)
 
